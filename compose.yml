@@ -9,3 +9,11 @@ services:
     working_dir: /home/lab
     volumes:
       - ./labs/perflab/:/home/lab
+  shelllab:
+      build: .
+      stdin_open: true # docker run -i
+      tty: true        # docker run -t
+      entrypoint: /bin/bash
+      working_dir: /home/lab
+      volumes:
+        - ./labs/shlab-handout/:/home/lab
